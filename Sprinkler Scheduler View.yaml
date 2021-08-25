@@ -1,0 +1,277 @@
+  - icon: mdi:sprinkler
+    path: irrigation
+    title: Irrigation
+    badges:
+      - entity: timer.sprinkler_zone_1
+        name: Zone 1
+      - entity: timer.sprinkler_zone_2
+        name: Zone 2
+      - entity: timer.sprinkler_zone_3
+        name: Zone 3
+      - entity: timer.sprinkler_zone_4
+        name: Zone 4
+      - entity: timer.sprinkler_zone_5
+        name: Zone 5
+      - entity: timer.sprinkler_zone_6
+        name: Zone 6
+      - entity: timer.sprinkler_zone_7
+        name: Zone 7
+      - entity: timer.sprinkler_zone_8
+        name: Zone 8
+    cards:
+      - entities:
+          - entity: input_select.zone_selector
+            name: Controller Status
+          - type: divider
+          - entity: input_datetime.sprinkler_schedule_delay_start
+            name: Schedule Delay Start
+          - entity: input_datetime.sprinkler_schedule_delay_end
+            name: Schedule Delay End
+          - entity: input_number.sprinkler_delay_duration
+            name: Delay (days)
+            tap_action:
+              action: call-service
+              service: script.sprinkler_set_delay
+            hold_action:
+              action: more-info
+          - type: divider
+          - entity: sensor.sprinkler_next_run
+            icon: mdi:calendar-clock
+            name: Next run time
+          - entity: timer.sprinkler_zone_1
+            name: Zone 1
+          - entity: timer.sprinkler_zone_2
+            name: Zone 2
+          - entity: timer.sprinkler_zone_3
+            name: Zone 3
+          - entity: timer.sprinkler_zone_4
+            name: Zone 4
+          - entity: timer.sprinkler_zone_5
+            name: Zone 5
+          - entity: timer.sprinkler_zone_6
+            name: Zone 6
+          - entity: timer.sprinkler_zone_7
+            name: Zone 7
+          - entity: timer.sprinkler_zone_8
+            name: Zone 8
+        show_header_toggle: false
+        state_color: true
+        title: Sprinklers
+        type: entities
+      - entities:
+          - entity: timer.sprinkler_zone_1
+            name: Zone 1
+          - entity: timer.sprinkler_zone_2
+            name: Zone 2
+          - entity: timer.sprinkler_zone_3
+            name: Zone 3
+          - entity: timer.sprinkler_zone_4
+            name: Zone 4
+          - entity: timer.sprinkler_zone_5
+            name: Zone 5
+          - entity: timer.sprinkler_zone_6
+            name: Zone 6
+          - entity: timer.sprinkler_zone_7
+            name: Zone 7
+          - entity: timer.sprinkler_zone_8
+            name: Zone 8
+        hours_to_show: 24
+        title: Watering History
+        type: history-graph
+        refresh_interval: 1
+      - cards:
+          - entities:
+              - entity: input_boolean.sprinkler_schedule_1
+                name: Enabled
+            type: entities
+          - card:
+              entities:
+                - entity: input_datetime.sprinkler_start_schedule_1
+                  name: Start Time
+                - type: divider
+                - entity: input_number.sprinkler_duration_schedule_1_zone_1
+                  name: Zone 1 Duration
+                - entity: input_number.sprinkler_duration_schedule_1_zone_2
+                  name: Zone 2 Duration
+                - entity: input_number.sprinkler_duration_schedule_1_zone_3
+                  name: Zone 3 Duration
+                - entity: input_number.sprinkler_duration_schedule_1_zone_4
+                  name: Zone 4 Duration
+                - entity: input_number.sprinkler_duration_schedule_1_zone_5
+                  name: Zone 5 Duration
+                - entity: input_number.sprinkler_duration_schedule_1_zone_6
+                  name: Zone 6 Duration
+                - entity: input_number.sprinkler_duration_schedule_1_zone_7
+                  name: Zone 7 Duration
+                - entity: input_number.sprinkler_duration_schedule_1_zone_8
+                  name: Zone 8 Duration
+                - type: divider
+                - entity: input_boolean.sprinkler_schedule_sun_1
+                  name: Sunday
+                - entity: input_boolean.sprinkler_schedule_mon_1
+                  name: Monday
+                - entity: input_boolean.sprinkler_schedule_tue_1
+                  name: Tuesday
+                - entity: input_boolean.sprinkler_schedule_wed_1
+                  name: Wednesday
+                - entity: input_boolean.sprinkler_schedule_thu_1
+                  name: Thursday
+                - entity: input_boolean.sprinkler_schedule_fri_1
+                  name: Friday
+                - entity: input_boolean.sprinkler_schedule_sat_1
+                  name: Saturday
+              show_header_toggle: false
+              type: entities
+            conditions:
+              - entity: input_boolean.sprinkler_schedule_1
+                state: 'on'
+            type: conditional
+        title: Schedule 1
+        type: vertical-stack
+      - cards:
+          - entities:
+              - entity: input_boolean.sprinkler_schedule_2
+                name: Enabled
+            type: entities
+          - card:
+              entities:
+                - entity: input_datetime.sprinkler_start_schedule_2
+                  name: Start Time
+                - type: divider
+                - entity: input_number.sprinkler_duration_schedule_2_zone_1
+                  name: Zone 1 Duration
+                - entity: input_number.sprinkler_duration_schedule_2_zone_2
+                  name: Zone 2 Duration
+                - entity: input_number.sprinkler_duration_schedule_2_zone_3
+                  name: Zone 3 Duration
+                - entity: input_number.sprinkler_duration_schedule_2_zone_4
+                  name: Zone 4 Duration
+                - entity: input_number.sprinkler_duration_schedule_2_zone_5
+                  name: Zone 5 Duration
+                - entity: input_number.sprinkler_duration_schedule_2_zone_6
+                  name: Zone 6 Duration
+                - entity: input_number.sprinkler_duration_schedule_2_zone_7
+                  name: Zone 7 Duration
+                - entity: input_number.sprinkler_duration_schedule_2_zone_8
+                  name: Zone 8 Duration
+                - type: divider
+                - entity: input_boolean.sprinkler_schedule_sun_2
+                  name: Sunday
+                - entity: input_boolean.sprinkler_schedule_mon_2
+                  name: Monday
+                - entity: input_boolean.sprinkler_schedule_tue_2
+                  name: Tuesday
+                - entity: input_boolean.sprinkler_schedule_wed_2
+                  name: Wednesday
+                - entity: input_boolean.sprinkler_schedule_thu_2
+                  name: Thursday
+                - entity: input_boolean.sprinkler_schedule_fri_2
+                  name: Friday
+                - entity: input_boolean.sprinkler_schedule_sat_2
+                  name: Saturday
+              show_header_toggle: false
+              type: entities
+            conditions:
+              - entity: input_boolean.sprinkler_schedule_2
+                state: 'on'
+            type: conditional
+        title: Schedule 2
+        type: vertical-stack
+      - cards:
+          - entities:
+              - entity: input_boolean.sprinkler_schedule_3
+                name: Enabled
+            type: entities
+          - card:
+              entities:
+                - entity: input_datetime.sprinkler_start_schedule_3
+                  name: Start Time
+                - type: divider
+                - entity: input_number.sprinkler_duration_schedule_3_zone_1
+                  name: Zone 1 Duration
+                - entity: input_number.sprinkler_duration_schedule_3_zone_2
+                  name: Zone 2 Duration
+                - entity: input_number.sprinkler_duration_schedule_3_zone_3
+                  name: Zone 3 Duration
+                - entity: input_number.sprinkler_duration_schedule_3_zone_4
+                  name: Zone 4 Duration
+                - entity: input_number.sprinkler_duration_schedule_3_zone_5
+                  name: Zone 5 Duration
+                - entity: input_number.sprinkler_duration_schedule_3_zone_6
+                  name: Zone 6 Duration
+                - entity: input_number.sprinkler_duration_schedule_3_zone_7
+                  name: Zone 7 Duration
+                - entity: input_number.sprinkler_duration_schedule_3_zone_8
+                  name: Zone 8 Duration
+                - type: divider
+                - entity: input_boolean.sprinkler_schedule_sun_3
+                  name: Sunday
+                - entity: input_boolean.sprinkler_schedule_mon_3
+                  name: Monday
+                - entity: input_boolean.sprinkler_schedule_tue_3
+                  name: Tuesday
+                - entity: input_boolean.sprinkler_schedule_wed_3
+                  name: Wednesday
+                - entity: input_boolean.sprinkler_schedule_thu_3
+                  name: Thursday
+                - entity: input_boolean.sprinkler_schedule_fri_3
+                  name: Friday
+                - entity: input_boolean.sprinkler_schedule_sat_3
+                  name: Saturday
+              show_header_toggle: false
+              type: entities
+            conditions:
+              - entity: input_boolean.sprinkler_schedule_3
+                state: 'on'
+            type: conditional
+        title: Schedule 3
+        type: vertical-stack
+      - cards:
+          - entities:
+              - entity: input_boolean.sprinkler_schedule_4
+                name: Enabled
+            type: entities
+          - card:
+              entities:
+                - entity: input_datetime.sprinkler_start_schedule_4
+                  name: Start Time
+                - type: divider
+                - entity: input_number.sprinkler_duration_schedule_4_zone_1
+                  name: Zone 1 Duration
+                - entity: input_number.sprinkler_duration_schedule_4_zone_2
+                  name: Zone 2 Duration
+                - entity: input_number.sprinkler_duration_schedule_4_zone_3
+                  name: Zone 3 Duration
+                - entity: input_number.sprinkler_duration_schedule_4_zone_4
+                  name: Zone 4 Duration
+                - entity: input_number.sprinkler_duration_schedule_4_zone_5
+                  name: Zone 5 Duration
+                - entity: input_number.sprinkler_duration_schedule_4_zone_6
+                  name: Zone 6 Duration
+                - entity: input_number.sprinkler_duration_schedule_4_zone_7
+                  name: Zone 7 Duration
+                - entity: input_number.sprinkler_duration_schedule_4_zone_8
+                  name: Zone 8 Duration
+                - type: divider
+                - entity: input_boolean.sprinkler_schedule_sun_4
+                  name: Sunday
+                - entity: input_boolean.sprinkler_schedule_mon_4
+                  name: Monday
+                - entity: input_boolean.sprinkler_schedule_tue_4
+                  name: Tuesday
+                - entity: input_boolean.sprinkler_schedule_wed_4
+                  name: Wednesday
+                - entity: input_boolean.sprinkler_schedule_thu_4
+                  name: Thursday
+                - entity: input_boolean.sprinkler_schedule_fri_4
+                  name: Friday
+                - entity: input_boolean.sprinkler_schedule_sat_4
+                  name: Saturday
+              show_header_toggle: false
+              type: entities
+            conditions:
+              - entity: input_boolean.sprinkler_schedule_4
+                state: 'on'
+            type: conditional
+        title: Schedule 4
+        type: vertical-stack

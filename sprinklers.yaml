@@ -1,0 +1,744 @@
+switch:
+  - platform: rpi_gpio
+    invert_logic: true
+    # Refer to Raspberry Pi pinout to set port numbers
+    ports:
+      14: Sprinkler Zone 1
+      15: Sprinkler Zone 2
+      18: Sprinkler Zone 3
+      23: Sprinkler Zone 4
+      24: Sprinkler Zone 5
+      25: Sprinkler Zone 6
+      8: Sprinkler Zone 7
+      7: Sprinkler Zone 8
+
+# Define timers that control sprinkler switches
+timer:
+  sprinkler_zone_1:
+    name: Sprinkler Zone 1
+    icon: mdi:sprinkler
+    duration: 60
+  sprinkler_zone_2:
+    name: Sprinkler Zone 2
+    icon: mdi:sprinkler
+    duration: 60
+  sprinkler_zone_3:
+    name: Sprinkler Zone 3
+    icon: mdi:sprinkler
+    duration: 60
+  sprinkler_zone_4:
+    name: Sprinkler Zone 4
+    icon: mdi:sprinkler
+    duration: 60
+  sprinkler_zone_5:
+    name: Sprinkler Zone 5
+    icon: mdi:sprinkler
+    duration: 60
+  sprinkler_zone_6:
+    name: Sprinkler Zone 6
+    icon: mdi:sprinkler
+    duration: 60
+  sprinkler_zone_7:
+    name: Sprinkler Zone 7
+    icon: mdi:sprinkler
+    duration: 60
+  sprinkler_zone_8:
+    name: Sprinkler Zone 8
+    icon: mdi:sprinkler
+    duration: 60
+
+# Schedule start times
+input_datetime:
+  sprinkler_start_schedule_1:
+    name: Schedule 1 Start Time
+    has_date: false
+    has_time: true
+  sprinkler_start_schedule_2:
+    name: Schedule 2 Start Time
+    has_date: false
+    has_time: true
+  sprinkler_start_schedule_3:
+    name: Schedule 3 Start Time
+    has_date: false
+    has_time: true
+  sprinkler_start_schedule_4:
+    name: Schedule 4 Start Time
+    has_date: false
+    has_time: true
+  sprinkler_schedule_delay_start:
+    name: Sprinkler Schedule Delay Start
+    has_date: true
+    has_time: true
+  sprinkler_schedule_delay_end:
+    name: Sprinkler Schedule Delay End
+    has_date: true
+    has_time: true
+
+#Zone durations for each schedule
+input_number:
+#Schedule 1
+  sprinkler_duration_schedule_1_zone_1:
+    name: "Schedule 1/Zone 1 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_1_zone_2:
+    name: "Schedule 1/Zone 2 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_1_zone_3:
+    name: "Schedule 1/Zone 3 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_1_zone_4:
+    name: "Schedule 1/Zone 4 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_1_zone_5:
+    name: "Schedule 1/Zone 5 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_1_zone_6:
+    name: "Schedule 1/Zone 6 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_1_zone_7:
+    name: "Schedule 1/Zone 7 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_1_zone_8:
+    name: "Schedule 1/Zone 8 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+#Schedule 2
+  sprinkler_duration_schedule_2_zone_1:
+    name: "Schedule 2/Zone 1 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_2_zone_2:
+    name: "Schedule 2/Zone 2 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_2_zone_3:
+    name: "Schedule 2/Zone 3 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_2_zone_4:
+    name: "Schedule 2/Zone 4 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_2_zone_5:
+    name: "Schedule 2/Zone 5 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_2_zone_6:
+    name: "Schedule 2/Zone 6 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_2_zone_7:
+    name: "Schedule 2/Zone 7 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_2_zone_8:
+    name: "Schedule 2/Zone 8 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+#Schedule 3
+  sprinkler_duration_schedule_3_zone_1:
+    name: "Schedule 3/Zone 1 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_3_zone_2:
+    name: "Schedule 3/Zone 2 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_3_zone_3:
+    name: "Schedule 3/Zone 3 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_3_zone_4:
+    name: "Schedule 3/Zone 4 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_3_zone_5:
+    name: "Schedule 3/Zone 5 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_3_zone_6:
+    name: "Schedule 3/Zone 6 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_3_zone_7:
+    name: "Schedule 3/Zone 7 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_3_zone_8:
+    name: "Schedule 3/Zone 8 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+#Schedule 4
+  sprinkler_duration_schedule_4_zone_1:
+    name: "Schedule 4/Zone 1 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_4_zone_2:
+    name: "Schedule 4/Zone 2 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_4_zone_3:
+    name: "Schedule 4/Zone 3 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_4_zone_4:
+    name: "Schedule 4/Zone 4 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_4_zone_5:
+    name: "Schedule 4/Zone 5 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_4_zone_6:
+    name: "Schedule 4/Zone 6 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_4_zone_7:
+    name: "Schedule 4/Zone 7 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+  sprinkler_duration_schedule_4_zone_8:
+    name: "Schedule 4/Zone 8 Duration"
+    min: 0
+    max: 60
+    step: 1
+    mode: box
+    unit_of_measurement: "min"
+    icon: mdi:clock
+    
+  sprinkler_delay_duration:
+    min: 0
+    max: 31
+    step: 1
+    initial: 1
+    icon: mdi:timer
+    name: Sprinkler Schedule Delay Duration (Days)
+    mode: box
+
+#On/off for each schedule. Schedules can be set and then turned off/on as needed.
+input_boolean:
+  sprinkler_schedule_1:
+    name: Schedule 1 On/Off
+  sprinkler_schedule_2:
+    name: Schedule 2 On/Off
+  sprinkler_schedule_3:
+    name: Schedule 3 On/Off
+  sprinkler_schedule_4:
+    name: Schedule 4 On/Off
+    
+# On/off for each day of week for each schedule
+## Schedule 1
+  sprinkler_schedule_sun_1:
+    name: Sunday
+  sprinkler_schedule_mon_1:
+    name: Monday
+  sprinkler_schedule_tue_1:
+    name: Tuesday
+  sprinkler_schedule_wed_1:
+    name: Wednesday
+  sprinkler_schedule_thu_1:
+    name: Thursday
+  sprinkler_schedule_fri_1:
+    name: Friday
+  sprinkler_schedule_sat_1:
+    name: Saturday
+## Schedule 2
+  sprinkler_schedule_sun_2:
+    name: Sunday
+  sprinkler_schedule_mon_2:
+    name: Monday
+  sprinkler_schedule_tue_2:
+    name: Tuesday
+  sprinkler_schedule_wed_2:
+    name: Wednesday
+  sprinkler_schedule_thu_2:
+    name: Thursday
+  sprinkler_schedule_fri_2:
+    name: Friday
+  sprinkler_schedule_sat_2:
+    name: Saturday
+## Schedule 3
+  sprinkler_schedule_sun_3:
+    name: Sunday
+  sprinkler_schedule_mon_3:
+    name: Monday
+  sprinkler_schedule_tue_3:
+    name: Tuesday
+  sprinkler_schedule_wed_3:
+    name: Wednesday
+  sprinkler_schedule_thu_3:
+    name: Thursday
+  sprinkler_schedule_fri_3:
+    name: Friday
+  sprinkler_schedule_sat_3:
+    name: Saturday
+## Schedule 4
+  sprinkler_schedule_sun_4:
+    name: Sunday
+  sprinkler_schedule_mon_4:
+    name: Monday
+  sprinkler_schedule_tue_4:
+    name: Tuesday
+  sprinkler_schedule_wed_4:
+    name: Wednesday
+  sprinkler_schedule_thu_4:
+    name: Thursday
+  sprinkler_schedule_fri_4:
+    name: Friday
+  sprinkler_schedule_sat_4:
+    name: Saturday
+
+# Drop-down selector that allows for toggling system for off, schedule or turning on a single zone
+input_select:
+  zone_selector:
+    name: Zone Selection
+    options:
+      - "Off"
+      - "Schedule"
+      - Zone 1
+      - Zone 2
+      - Zone 3
+      - Zone 4
+      - Zone 5
+      - Zone 6
+      - Zone 7
+      - Zone 8
+# For programming convenience, schedules and zones are placed in groups. The scheduling logic
+# loops through the entities in these groups so that additional zones/schedules can be added
+# if desired.
+group:
+  sprinkler_schedules:
+    name: Sprinkler Schedules
+    entities:
+      - input_datetime.sprinkler_start_schedule_1
+      - input_datetime.sprinkler_start_schedule_2
+      - input_datetime.sprinkler_start_schedule_3
+      - input_datetime.sprinkler_start_schedule_4
+  sprinkler_zones:
+    name: Sprinkler Zones
+    entities:
+      - timer.sprinkler_zone_1
+      - timer.sprinkler_zone_2
+      - timer.sprinkler_zone_3
+      - timer.sprinkler_zone_4
+      - timer.sprinkler_zone_5
+      - timer.sprinkler_zone_6
+      - timer.sprinkler_zone_7
+      - timer.sprinkler_zone_8
+sensor:
+  - platform: template
+    sensors:
+      sprinkler_status:
+        value_template: >-
+          {% set curr_datetime = strptime(states('sensor.date_time') | replace(',', ''),  '%Y-%m-%d %H:%M') %}
+          {% set curr_datetime = curr_datetime 
+             + timedelta(seconds = now().timestamp() - strptime(states('sensor.date_time') | replace(',', ''),  '%Y-%m-%d %H:%M').timestamp()) %}
+          {% set curr_timestamp = curr_datetime.timestamp() | int %}
+          {# A single zone has been selected, turn on using default timer duration #}
+          {% if states('input_select.zone_selector') is match('Zone', ignorecase=false) %}
+            {% set zone = states('input_select.zone_selector').split(' ')[1] %}
+            {% set time = state_attr('timer.sprinkler_zone_' ~ zone, 'duration').split(':') %}
+            {% set duration = time[0] | int * 3600 + time[1] | int * 60 + time[2] | int %}
+            {{ zone ~ ',' ~ duration }}
+          {# Selector is set to off or override in effect #}
+          {% elif is_state('input_select.zone_selector', 'Off')
+             or (curr_timestamp >= (state_attr('input_datetime.sprinkler_schedule_delay_start', 'timestamp') | int)
+              and (curr_timestamp | int) <= (state_attr('input_datetime.sprinkler_schedule_delay_end', 'timestamp') | int)) %}
+            {{ '-1,0' }}
+          {# Schedule is active, determine if a zone is active. If so determine active zone and time left.
+             The code allows for a schedule to continue where it left off if Home Assistant is restarted
+             or scheduling is toggled off/on during an active schedule. #}
+          {% else %}
+            {# Create persistent object to store start conditions and active schedule #}
+            {% set start_conditions = namespace(time_diff = 84600,
+               start_time = strptime('1/1/1900',  '%m/%d/%Y'),
+               schedule_number = -1)
+            %}
+            {% for schedule in state_attr('group.sprinkler_schedules', 'entity_id') %}
+              {% if is_state('input_boolean.sprinkler_schedule_' ~ schedule[-1:], 'on') %}
+                {% set s_start_time = strptime(curr_datetime.strftime('%m/%d/%Y') ~ ' ' ~ states(schedule), '%m/%d/%Y %H:%M:%S') %}
+                {# If schedule is determined to be in the future, go back 1 day to determine if it's in fact the active schedule #}
+                {% if curr_datetime < s_start_time %}
+                  {% set s_start_time = s_start_time - timedelta(days = 1) %}
+                {% endif %}
+                {# From the calculated start time, get day of week to determine if schedule is on/off.
+                   Note we can't use day of week for the current timestamp, otherwise zones that run past
+                   midnight for a schedule may shut off. The day of week on/off is always compared to the
+                   day of week of the schedule start time #}
+                {% set schedule_start_day = (s_start_time.timestamp()) | timestamp_custom("%a", true) %}
+                {% if is_state('input_boolean.sprinkler_schedule_' ~ schedule_start_day ~ '_' ~ schedule[-1:], 'on') %}
+                  {# This essentially determines the schedule with the smallest time delta between schedule
+                     start time and the current timestamp. In case of overlapping schedules (technically not
+                     desirable behavior of the controller) the one with a start time closest to the current 
+                     timestamp is considered to be the active schedule #}
+                  {% set t = curr_datetime.timestamp() - s_start_time.timestamp() %}
+                  {% if t < start_conditions.time_diff %}
+                    {% set start_conditions.time_diff = t %}
+                    {% set start_conditions.start_time = s_start_time %}
+                    {% set start_conditions.schedule_number = schedule[-1:] | int %}
+                  {% endif %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            {# Create object that persists for loop for calculating which zone is active #}
+            {%
+              set zone_iterator = namespace(start_time = strptime('1/1/1900',  '%m/%d/%Y'),
+                                            end_time = strptime('1/1/1900',  '%m/%d/%Y'),
+                                            active_zone = -1,
+                                            time_left = 0)
+            %}
+            {# Loop through all zones of a schedule to determine which is active and calculate remaining time left. #}
+            {% for zone in state_attr('group.sprinkler_zones', 'entity_id') %}
+              {% set zone_runtime = states('input_number.sprinkler_duration_schedule_' ~ start_conditions.schedule_number ~ '_zone_' ~ zone[-1:]) | int %}
+              {% if zone_iterator.active_zone == -1 %}
+                {% if loop.index == 1 %}
+                  {% set zone_iterator.start_time = start_conditions.start_time %}
+                {% else %}
+                  {% set zone_iterator.start_time = zone_iterator.end_time %}
+                {% endif %}
+                {# Set zone start and end times and check if current timestamp is in range #}
+                {% set zone_iterator.end_time = zone_iterator.start_time + timedelta(minutes = zone_runtime) %}
+                {% if curr_datetime >= zone_iterator.start_time and curr_datetime < zone_iterator.end_time %}
+                  {% set zone_iterator.active_zone = zone[-1:] | int %}
+                  {% set zone_iterator.time_left = zone_iterator.end_time.timestamp() - curr_datetime.timestamp() %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            {{ zone_iterator.active_zone ~ ',' ~ zone_iterator.time_left | int }}
+          {% endif %}
+      sprinkler_next_run:
+        value_template: >-
+          {% if not is_state('input_select.zone_selector', 'Schedule') %}
+            {{ 'Schedule disabled.' }}
+          {% else %}
+            {% set curr_timestamp = strptime(states('sensor.date_time') | replace(',', ''),  '%Y-%m-%d %H:%M').timestamp() %}
+            {% set curr_timestamp = now().timestamp() %}
+            {% set next_start = namespace(time = strptime('12/31/9999 00:00:00', '%m/%d/%Y %H:%M:%S'), schedule = '') %}
+            {% for start_timestamp in [now().timestamp(), strptime(strptime(states('input_datetime.sprinkler_schedule_delay_end'), '%Y-%m-%d %H:%M:%S').timestamp() | timestamp_custom('%m/%d/%Y'), '%m/%d/%Y').timestamp()] %}
+              {% for day_number in range(0, 6) %}
+                {% set loop_timestamp = start_timestamp + day_number * 86400 %}
+                {% for s in state_attr('group.sprinkler_schedules', 'entity_id') %}
+                  {% set schedule = s[-1:] %}
+                  {% if is_state('input_boolean.sprinkler_schedule_' ~ schedule, 'on') %}
+                    {% set run_time = namespace(time = 0) %}
+                    {% for zone in state_attr('group.sprinkler_zones', 'entity_id') %}
+                      {% set zn = zone[-1:] | int %}
+                      {% set run_time.time = run_time.time + states('input_number.sprinkler_duration_schedule_' ~ schedule ~ '_zone_' ~ zn) | int %}
+                    {% endfor %}
+                    {% set schedule_start_day = loop_timestamp | timestamp_custom("%a", true) %}
+                    {% if run_time.time > 0 and is_state('input_boolean.sprinkler_schedule_' ~ schedule_start_day ~ '_' ~ schedule, 'on')%}
+                      {% set date_string = loop_timestamp | timestamp_custom('%m/%d/%Y') %}
+                      {% set zone_start = strptime(date_string ~ ' ' ~ states(s), '%m/%d/%Y %H:%M:%S') %}
+                      {% if zone_start < next_start.time 
+                         and zone_start.timestamp() > curr_timestamp
+                         and (zone_start.timestamp() | int < state_attr('input_datetime.sprinkler_schedule_delay_start', 'timestamp') | int
+                           or zone_start.timestamp() | int > state_attr('input_datetime.sprinkler_schedule_delay_end', 'timestamp') | int) %}
+                        {% set next_start.time = zone_start %}
+                        {% set next_start.schedule = 'Schedule ' ~ schedule %}
+                      {% endif %}
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+            {% endfor %}
+            {% if next_start.time != strptime('12/31/9999 00:00:00', '%m/%d/%Y %H:%M:%S') %}
+              {% if next_start.time.strftime('%m/%d/%Y') == now().strftime('%m/%d/%Y') %}
+                {{ next_start.schedule ~ ' - Today @' ~ next_start.time.strftime('%I:%M %p') | replace(' 0', ' ') }}
+              {% elif next_start.time.strftime('%m/%d/%Y') == (now() + timedelta(days = 1)).strftime('%m/%d/%Y') %}
+                {{ next_start.schedule ~ ' - Tomorrow @' ~ next_start.time.strftime('%I:%M %p') | replace(' 0', ' ') }}
+              {% else %}
+                {{ next_start.schedule ~ ' - ' ~ next_start.time.strftime('%A %m/%d/%Y @ %I:%M %p') | replace(' 0', ' ') }}
+              {% endif %}
+            {% else %}
+              {{ 'Schedule disabled.' }}
+            {% endif %}
+          {% endif %}
+binary_sensor:
+  - platform: template
+    sensors:
+      sprinkler_override:
+        friendly_name: Override in effect
+        icon_template: mdi:weather-pouring
+        value_template: >-
+          {% set curr_timestamp = strptime(states('sensor.date_time') | replace(',', ''),  '%Y-%m-%d %H:%M').timestamp() %}
+          {% set curr_timestamp = now().timestamp() %}
+          {{ 
+             ((curr_timestamp | int) >= (state_attr('input_datetime.sprinkler_schedule_delay_start', 'timestamp') | int)
+               and (curr_timestamp | int) <= (state_attr('input_datetime.sprinkler_schedule_delay_end', 'timestamp') | int))
+          }}
+# Sprinkler zone binary sensors define which zone is active
+      sprinkler_zone_1:
+        value_template: "{{ states('sensor.sprinkler_status').split(',')[0] | int == 1 }}"
+        attribute_templates:
+          time_left: >-
+            {% if states('sensor.sprinkler_status').split(',')[0] | int == 1 %}
+              {{ states('sensor.sprinkler_status').split(',')[1] | int }}
+            {% else %}
+              {{ 0 }}
+            {% endif %}
+      sprinkler_zone_2:
+        value_template: "{{ states('sensor.sprinkler_status').split(',')[0] | int == 2 }}"
+        attribute_templates:
+          time_left: >-
+            {% if states('sensor.sprinkler_status').split(',')[0] | int == 2 %}
+              {{ states('sensor.sprinkler_status').split(',')[1] | int }}
+            {% else %}
+              {{ 0 }}
+            {% endif %}
+      sprinkler_zone_3:
+        value_template: "{{ states('sensor.sprinkler_status').split(',')[0] | int == 3 }}"
+        attribute_templates:
+          time_left: >-
+            {% if states('sensor.sprinkler_status').split(',')[0] | int == 3 %}
+              {{ states('sensor.sprinkler_status').split(',')[1] | int }}
+            {% else %}
+              {{ 0 }}
+            {% endif %}
+      sprinkler_zone_4:
+        value_template: "{{ states('sensor.sprinkler_status').split(',')[0] | int == 4 }}"
+        attribute_templates:
+          time_left: >-
+            {% if states('sensor.sprinkler_status').split(',')[0] | int == 4 %}
+              {{ states('sensor.sprinkler_status').split(',')[1] | int }}
+            {% else %}
+              {{ 0 }}
+            {% endif %}
+      sprinkler_zone_5:
+        value_template: "{{ states('sensor.sprinkler_status').split(',')[0] | int == 5 }}"
+        attribute_templates:
+          time_left: >-
+            {% if states('sensor.sprinkler_status').split(',')[0] | int == 5 %}
+              {{ states('sensor.sprinkler_status').split(',')[1] | int }}
+            {% else %}
+              {{ 0 }}
+            {% endif %}
+      sprinkler_zone_6:
+        value_template: "{{ states('sensor.sprinkler_status').split(',')[0] | int == 6 }}"
+        attribute_templates:
+          time_left: >-
+            {% if states('sensor.sprinkler_status').split(',')[0] | int == 6 %}
+              {{ states('sensor.sprinkler_status').split(',')[1] | int }}
+            {% else %}
+              {{ 0 }}
+            {% endif %}
+      sprinkler_zone_7:
+        value_template: "{{ states('sensor.sprinkler_status').split(',')[0] | int == 7 }}"
+        attribute_templates:
+          time_left: >-
+            {% if states('sensor.sprinkler_status').split(',')[0] | int == 7 %}
+              {{ states('sensor.sprinkler_status').split(',')[1] | int }}
+            {% else %}
+              {{ 0 }}
+            {% endif %}
+      sprinkler_zone_8:
+        value_template: "{{ states('sensor.sprinkler_status').split(',')[0] | int == 8 }}"
+        attribute_templates:
+          time_left: >-
+            {% if states('sensor.sprinkler_status').split(',')[0] | int == 8 %}
+              {{ states('sensor.sprinkler_status').split(',')[1] | int }}
+            {% else %}
+              {{ 0 }}
+            {% endif %}
+script:
+  sprinkler_set_delay:
+    sequence:
+      - service: input_datetime.set_datetime
+        target:
+          entity_id: input_datetime.sprinkler_schedule_delay_end
+        data:
+          datetime: "{{ now() + timedelta(days = states('input_number.sprinkler_delay_duration') | int) }}"
+      - service: input_datetime.set_datetime
+        target:
+          entity_id: input_datetime.sprinkler_schedule_delay_start
+        data:
+          datetime: "{{ now() }}"
+          
+automation:
+# Automations that start/stop each zone timer. Ensures only 1 timer is running at a time
+# unless timers are manually started via timer API
+  - alias: Sprinkler Schedule Trigger On
+    trigger:
+      - platform: state
+        entity_id:
+          - binary_sensor.sprinkler_zone_1
+          - binary_sensor.sprinkler_zone_2
+          - binary_sensor.sprinkler_zone_3
+          - binary_sensor.sprinkler_zone_4
+          - binary_sensor.sprinkler_zone_5
+          - binary_sensor.sprinkler_zone_6
+          - binary_sensor.sprinkler_zone_7
+          - binary_sensor.sprinkler_zone_8
+    mode: parallel
+    condition: "{{ is_state('binary_sensor.' ~ trigger.to_state.object_id, 'on') }}"
+    action:
+      service_template: "timer.start"
+      data_template:
+        entity_id: "{{ 'timer.sprinkler_zone_' ~ trigger.to_state.object_id[-1:] }}"
+        duration: "{{ state_attr('binary_sensor.' ~ trigger.to_state.object_id, 'time_left') | int }}"
+  - alias: Sprinkler Schedule Trigger Off
+    trigger:
+      - platform: state
+        entity_id:
+          - binary_sensor.sprinkler_zone_1
+          - binary_sensor.sprinkler_zone_2
+          - binary_sensor.sprinkler_zone_3
+          - binary_sensor.sprinkler_zone_4
+          - binary_sensor.sprinkler_zone_5
+          - binary_sensor.sprinkler_zone_6
+          - binary_sensor.sprinkler_zone_7
+          - binary_sensor.sprinkler_zone_8
+    mode: parallel
+    condition: "{{ is_state('binary_sensor.' ~ trigger.to_state.object_id, 'off') }}"
+    action:
+      service_template: "timer.finish"
+      data_template:
+        entity_id: "{{ 'timer.sprinkler_zone_' ~ trigger.to_state.object_id[-1:] }}"
+# Based on the timer status, the GPIO switch for each zone is switched on or off.
+  - alias: Sprinkler Timer Trigger
+    trigger:
+      - platform: state
+        entity_id:
+          - timer.sprinkler_zone_1
+          - timer.sprinkler_zone_2
+          - timer.sprinkler_zone_3
+          - timer.sprinkler_zone_4
+          - timer.sprinkler_zone_5
+          - timer.sprinkler_zone_6
+          - timer.sprinkler_zone_7
+          - timer.sprinkler_zone_8
+    mode: parallel
+    action:
+      service_template: "switch.{%- if trigger.to_state.state == 'active' -%} turn_on {%- else -%} turn_off {%- endif -%}"
+      data_template:
+        entity_id: "{{ 'switch.sprinkler_zone_' ~ trigger.to_state.object_id[-1:] }}"
