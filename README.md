@@ -1,6 +1,6 @@
 # Home Assistant Sprinkler Controller
 A remotely-accessible sprinkler controller built using [Home Assistant](https://www.home-assistant.io/) and Raspberry Pi 3B+
-![Sprinkler Controller Scheduler](https://user-images.githubusercontent.com/24600116/130844032-bcc18142-818a-445a-b8c6-75ed0e62ba6b.png)
+![Sprinkler Dashboard](https://user-images.githubusercontent.com/24600116/131024092-ad898b55-c5e2-4fa3-8f3e-cf7f458a9265.png)
 # Design Goals
 I wanted a fairly simple sprinkler controller that could handle up to 8 valves and run sequential schedules at certain times of the day and for certain days of the week. I run Home Assistant for general home automation and wanted to integrate the sprinkler scheduling into my existing setup.
 # Features
