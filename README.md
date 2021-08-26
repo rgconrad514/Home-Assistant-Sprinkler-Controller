@@ -21,7 +21,7 @@ I wanted a fairly simple sprinkler controller that could handle up to 8 valves a
 * [5V 8 relay board](https://www.amazon.com/gp/product/B00KTELP3I/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
 * [24VA 1.6A transformer](https://www.amazon.com/gp/product/B07QS5JPKZ/ref=ppx_yo_dt_b_asin_title_o03_s02?ie=UTF8&psc=1)
 # Wiring Diagram
-This is a slightly modified design from other common Raspberry Pi-based sprinkler controllers. Instead of powering the relay off of the Pi board, a AC to 5V DC buck converter is wired to the 24VAC transformer to power the relay via the JCC-VD pin (jumper removed). This is to ensure the relay does draw current directly from the Pi board, which may not be enough to power it.
+This is a slightly modified design from other common Raspberry Pi-based sprinkler controllers. Instead of powering the relay off of the Pi board, an AC to 5V DC buck converter is wired to the 24VAC transformer to power the relay via the JCC-VD pin (jumper removed). This is to ensure the relay does draw current directly from the Pi board, which may not be enough to power it.
 ![Sprinkler Wiring Diagram 4](https://user-images.githubusercontent.com/24600116/131020111-73a72e33-26a6-4594-93d6-506eff3990de.png)
 # Code
 The code includes two files. The sprinklers.yaml file contains all of the scheduling code and is loaded as a [package](https://www.home-assistant.io/docs/configuration/packages/) via the Home Assistant config file. The Sprinkler Scheduler View.yaml file contains code the can be pasted into the raw view of the LoveLace frontend editor. This will provide a single view for calibrating the sprinkler system as well as schedule delays and determining when the system will run next.
