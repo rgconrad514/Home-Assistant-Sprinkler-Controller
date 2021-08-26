@@ -30,6 +30,7 @@ The code includes two files. The sprinklers.yaml file contains all of the schedu
 * If Home Assistant reboots or the schedule is toggled on/off, the code will resume a running schedule and calculate the remaining runtime for the scheduled zone.
 # Final Build
 My Home Assistant Raspberry Pi lives in my garage where it also runs a Z-wave network along with some other integrations. The Pi connects to my home network using an ethernet drop that runs to a POE switch. I use a [POE hat](https://www.amazon.com/LoveRPi-Power-Over-Ethernet-Raspberry-Model-Translucent/dp/B07KF7F9GS?pd_rd_w=E6rIk&pf_rd_p=ba22ea03-d3c1-4ebb-8d3e-472aa0cf3b30&pf_rd_r=FK1E981C4ZG60GS2P50M&pd_rd_r=282f1537-356c-44a4-aaec-7af5d6242464&pd_rd_wg=cPTu2&pd_rd_i=B07KF7F9GS&psc=1&ref_=pd_bap_d_rp_2_t) to provide power to the Pi.
+![0825211128a](https://user-images.githubusercontent.com/24600116/131020877-b00292a4-a38e-4e3c-9e05-7b6b0d7b8c4d.jpg)
 # TODO
 * Weather/precipitation integration. I intially tried to automate this based on recorded precipitation from one of the weather API integrations in Home Assistant. However I found it easiest to just manually set a schedule delay after checking the forecast. With a traditional controller I would often forget to turn the sprinklers back on after turning them off for rainy days and this was enough to overcome this problem. However I may try to incorporate a rain sensor into the setup at a later time.
 * Schedule that runs every N days instead of certain days of the week
