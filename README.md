@@ -7,7 +7,6 @@ I wanted a fairly simple sprinkler controller that could handle up to 8 valves a
 * Ability to delay or schedule off-time for the schedules to account for rainy weather.
 * Manual control of each sprinkler value for inspection/calibration.
 * Enforce only one valve open at a time; I don't have the water pressure to run multiple valves at once and most controllers only allow for one to run at a time
-* Weather/precipitation integration. I intially tried to automate this based on recorded precipitation from one of the weather API integrations in Home Assistant. However I found it easiest to just manually set a schedule delay after checking the forecast. With a traditional controller I would often forget to turn the sprinklers back on after turning them off for rainy days and this was enough to overcome this problem. However I may try to incorporate a rain sensor into the setup at a later time.
 # Softare
 * [32-bit Home Assistant OS for Raspberry Pi 3B+](https://github.com/home-assistant/operating-system/releases/download/6.2/haos_rpi4-6.2.img.xz)
 # Hardware
@@ -21,3 +20,6 @@ I wanted a fairly simple sprinkler controller that could handle up to 8 valves a
 ![Sprinkler Wiring Diagram 4](https://user-images.githubusercontent.com/24600116/131014380-066b9e48-a181-40f9-a182-14e6ab15ba55.png)
 # Code
 The code includes two files. The sprinklers.yaml file contains all of the scheduling code and is loaded as a [package](https://www.home-assistant.io/docs/configuration/packages/) via the Home Assistant config file. The Sprinkler Scheduler View.yaml file contains code the can be pasted into the raw view of the LoveLace frontend editor. This will provide a single view for calibrating the sprinkler system as well as schedule delays and determining when the system will run next.
+# TODO
+* Weather/precipitation integration. I intially tried to automate this based on recorded precipitation from one of the weather API integrations in Home Assistant. However I found it easiest to just manually set a schedule delay after checking the forecast. With a traditional controller I would often forget to turn the sprinklers back on after turning them off for rainy days and this was enough to overcome this problem. However I may try to incorporate a rain sensor into the setup at a later time.
+* Schedule that runs every N days instead of certain days of the week
