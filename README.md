@@ -10,6 +10,7 @@ I wanted a fairly simple sprinkler controller that could handle up to 8 valves a
 # Softare
 * [32-bit Home Assistant OS for Raspberry Pi 3B+](https://github.com/home-assistant/operating-system/releases/download/6.2/haos_rpi4-6.2.img.xz)
 # Hardware
+* [Raspberry Pi 3B+ with power source](https://www.amazon.com/ELEMENT-Element14-Raspberry-Pi-Motherboard/dp/B07P4LSDYV/ref=sr_1_3?dchild=1&keywords=raspberry+pi+3b%2B&qid=1630003037&s=electronics&sr=1-3)
 * [BUD Industries electric/utility box](https://www.amazon.com/gp/product/B005UPANU2/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)
 * [Plastic internal panel](https://www.amazon.com/gp/product/B005UPE83U/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) to secure parts
 * [24VAC to 5V DC converter](https://www.amazon.com/gp/product/B00RE6QN4U/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1) to power the relay
