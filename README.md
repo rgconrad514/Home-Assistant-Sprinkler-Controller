@@ -9,7 +9,7 @@ I wanted a fairly simple sprinkler controller that could handle up to 8 valves a
 * Ability to delay or schedule off-time for all schedules to account for precipitation
 * Manual control of each sprinkler valve for inspection/calibration
 * Enforce only one valve open at a time; I don't have the water pressure to run multiple valves at once and most controllers only allow for one to run at a time
-# Softare Requirements
+# Software Requirements
 * [32-bit Home Assistant OS for Raspberry Pi 3B+](https://github.com/home-assistant/operating-system/releases/download/6.2/haos_rpi4-6.2.img.xz)
 * [Date-time sensor integration](https://www.home-assistant.io/integrations/time_date/)
 # Hardware Requirements
